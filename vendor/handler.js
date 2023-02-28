@@ -1,9 +1,20 @@
 'use strict';
 
-const pickup = {store: 'This Place'};
+const Chance = require('chance');
+
+const chance = new Chance();
+
+const createOrder = () => ({
+  store: chance.company(),
+  orderID: chance.guid(),
+  customer: chance.name(),
+  adress: chance.address(),
+});
+
+const pickup = createOrder();
 
 const delivered = (payload) => {
-  console.log(`Payment of ${payload.cost} sent, don't come back ${payload.driver}`);
+  console.log(`VENDOR: Thank you for delivering ${payload.orderID}`);
 };
 
 module.exports = {pickup, delivered};

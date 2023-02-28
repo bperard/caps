@@ -1,9 +1,11 @@
 'use strict';
 
 const pickup = (payload) => {
-  console.log(payload);
+  console.log(`DRIVER: picked up ${payload.orderID}`);
 };
 
-const delivered = {cost: 34, driver: 'Fred'};
+const delivered = (payload) => {
+  console.log(`DRIVER: delivered up ${payload.orderID}`);
+};
 
 module.exports = {pickup, delivered};

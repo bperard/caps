@@ -6,5 +6,11 @@ const handler = require('./handler');
 eventEmitter.on('PICKUP', (payload) => {
   handler.pickup(payload);
 
-  eventEmitter.emit('DELIVERED', handler.delivered);
+  eventEmitter.emit('IN_TRANSIT', payload);
+
+  eventEmitter.emit('DELIVERED', payload);
+});
+
+eventEmitter.on('DELIVERED', (payload) => {
+  handler.delivered(payload);
 });
