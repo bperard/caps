@@ -1,6 +1,5 @@
 'use strict';
 
-const eventEmitter = require('../eventEmitter');
 const handler = require('./handler');
 
 console.log = jest.fn();
@@ -15,7 +14,7 @@ describe('driver-handler', () => {
     expect(console.log).toHaveBeenCalledWith(`DRIVER: picked up ${payload.orderID}`);
   });
 
-  it('handler.delivered() Logs pickup event with payload.orderID', () => {
+  it('handler.delivered() Logs delivered event with payload.orderID', () => {
     const payload = {
       orderID: 42,
     };
