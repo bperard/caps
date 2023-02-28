@@ -10,8 +10,8 @@ A real-time service that allows for vendors, such as flower shops or restaurants
 
 ### Links and Resources
 
-<!-- - [GitHub Actions ci/cd](ADD) 
-- [back-end server url](http://xyz.com) (when applicable)
+- [GitHub Actions ci/cd](https://github.com/bperard/caps/actions)
+<!-- - [back-end server url](http://xyz.com) (when applicable)
 - [front-end application](http://xyz.com) (when applicable) -->
 
 ### Setup
@@ -33,7 +33,8 @@ for now I have none and do not require one
 
 #### Tests
 
-- Handler functions are tested
+- Driver-handler functions tested
+- Vendor-handler functions tested
 
 #### UML
 
