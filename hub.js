@@ -8,6 +8,7 @@ EVENTS.map(EVENT => {
   eventEmitter.on(EVENT, (payload) => {
     const eventNotification = {
       event: `${EVENT.toLowerCase()}`,
+      time: Date(),
       payload,
     };
     console.log('EVENT', eventNotification);
