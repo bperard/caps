@@ -8,13 +8,11 @@ const createOrder = () => ({
   store: chance.company(),
   orderID: chance.guid(),
   customer: chance.name(),
-  adress: chance.address(),
+  address: chance.address(),
 });
-
-const pickup = createOrder();
 
 const delivered = (payload) => {
   console.log(`VENDOR: Thank you for delivering ${payload.orderID}`);
 };
 
-module.exports = {pickup, delivered};
+module.exports = {createOrder, delivered};
